@@ -1,82 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard Attaques Honeypot</title>
+  <meta charset="UTF-8">
+  <title>Blacklist IPs</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #f9f9f9;
-      margin: 2rem;
-      color: #333;
+    body { font-family: Arial, sans-serif; padding: 2em; background: #f4f4f4; }
+    h1 { color: #333; }
+    .download-buttons {
+      margin-top: 2em;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    th, td {
-      padding: 0.8rem;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-    th {
-      background: #004578;
+    a.button {
+      display: inline-block;
+      margin: 0.5em 1em 0.5em 0;
+      padding: 0.7em 1.5em;
+      background-color: #007BFF;
       color: white;
+      text-decoration: none;
+      border-radius: 5px;
     }
-    tr:hover {
-      background: #f1f1f1;
+    a.button:hover {
+      background-color: #0056b3;
     }
-    .footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #777;
+    code {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
     }
   </style>
 </head>
 <body>
-  <h1>Top IPs - Attaques Honeypot</h1>
-  <table id="ip-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Adresse IP</th>
-        <th>Nombre d'attaques</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- JS injecte ici -->
-    </tbody>
-  </table>
-  <div class="footer">
-    Données générées par Nushell et publiées avec ❤️ sur GitHub Pages.
+
+  <h1>🔒 Top IPs à bloquer</h1>
+  <p>Fichiers générés automatiquement avec <code>NuShell</code>.</p>
+
+  <div class="download-buttons">
+    <a href="block_ips_iptables.sh" class="button" download>📥 Télécharger script iptables</a>
+    <a href="block_ips_nftables.sh" class="button" download>📥 Télécharger script nftables</a>
+    <a href="../top_ips.json" class="button" download>📥 Télécharger top_ips.json</a>
   </div>
 
-  <script>
-    fetch("top_ips.json")
-      .then(response => response.json())
-      .then(data => {
-        const tbody = document.querySelector("#ip-table tbody");
-        data.forEach((entry, index) => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${entry.src_ip}</td>
-            <td>${entry.count}</td>
-          `;
-          tbody.appendChild(row);
-        });
-      })
-      .catch(err => {
-        console.error("Erreur lors du chargement du JSON :", err);
-      });
-  </script>
 </body>
 </html>
