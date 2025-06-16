@@ -54,9 +54,6 @@
       <!-- JS injecte ici -->
     </tbody>
   </table>
-  <div class="footer">
-    Données générées par Nushell et publiées avec ❤️ sur GitHub Pages.
-  </div>
 
   <script>
     fetch("top_ips.json")
@@ -106,14 +103,16 @@
 </head>
 <body>
 
-  <h1>🔒 Top IPs à bloquer</h1>
-  <p>Fichiers générés automatiquement avec <code>NuShell</code>.</p>
+  <h1>Scripts pour bloquer les ips</h1>
+  <p>Fichiers générés automatiquement avec <code>NuShell</code>:</p>
 
   <div class="download-buttons">
     <a href="block_ips_iptables.sh" class="button" download>📥 Télécharger script iptables</a>
     <a href="block_ips_nftables.sh" class="button" download>📥 Télécharger script nftables</a>
-    <a href="../top_ips.json" class="button" download>📥 Télécharger top_ips.json</a>
+    <a href="../top_ips.json" class="button" download>📥 Télécharger la liste des ips</a>
   </div>
-
+<div class="footer">
+    Données générées par Nushell et publiées avec ❤ sur GitHub Pages.
+  </div>
 </body>
 </html>
