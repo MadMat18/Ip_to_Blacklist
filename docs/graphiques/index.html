@@ -38,7 +38,7 @@
       </div>
       <div class="col-md-6">
         <div class="card p-4">
-          <h5 class="mb-3">Top 10 Pays</h5>
+          <h5 class="mb-3">Top 10 Pays (avec plus de diversité)</h5>
           <canvas id="countryChart"></canvas>
         </div>
       </div>
@@ -108,7 +108,10 @@
 
     loadData().then(data => {
       const topSrcIp = countTop(data, 'src_ip');
-      const topCountries = countTop(data, 'geoip.country_code2');
+
+      // Prendre plus que top 10 pays pour diversité (ex: 15)
+      const topCountries = countTop(data, 'geoip.country_code2', 15);
+
       const protoDist = countTop(data, 'proto', 5);
       const severityDist = countTop(data, 'alert.severity', 5);
       const topDestPorts = countTop(data, 'dest_port');
