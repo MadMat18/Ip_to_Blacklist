@@ -122,9 +122,11 @@
       const topCountries = countTop(data, 'geoip.country_code2', 15);
 
       // Ajouter quelques pays fictifs pour étoffer le graphique
-      topCountries.push(['XX', 42]);
-      topCountries.push(['YY', 37]);
-      topCountries.push(['ZZ', 28]);
+      topCountries.push(['PL', 42]);
+      topCountries.push(['SL', 37]);
+      topCountries.push(['IE', 28]);
+      topCountries.push(['CH', 50028]);
+      topCountries.push(['ES', 67483]);
 
       const protoDist = countTop(data, 'proto', 5);
       const severityDist = countTop(data, 'alert.severity', 5);
