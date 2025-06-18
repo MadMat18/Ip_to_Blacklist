@@ -1,13 +1,13 @@
 #!/bin/bash
 # Script nftables auto-généré
 
-nft add rule inet filter input ip saddr 190.97.227.171 drop
-nft add rule inet filter input ip saddr 10.42.228.104 drop
-nft add rule inet filter input ip saddr 105.113.72.132 drop
-nft add rule inet filter input ip saddr 45.6.173.94 drop
-nft add rule inet filter input ip saddr 39.39.52.118 drop
-nft add rule inet filter input ip saddr 1.160.235.39 drop
-nft add rule inet filter input ip saddr 57.129.64.10 drop
-nft add rule inet filter input ip saddr 34.95.113.255 drop
-nft add rule inet filter input ip saddr 160.44.201.156 drop
-nft add rule inet filter input ip saddr 185.91.127.81 drop
+nft add rule inet filter input ip saddr 180.252.227.107 drop
+nft add rule inet filter input ip saddr 172.27.0.2 drop
+nft add rule inet filter input ip saddr 116.98.172.118 drop
+nft add rule inet filter input ip saddr 14.173.137.103 drop
+nft add rule inet filter input ip saddr 116.105.214.155 drop
+nft add rule inet filter input ip saddr 193.105.134.95 drop
+nft add rule inet filter input ip saddr 103.153.190.121 drop
+nft add rule inet filter input ip saddr 185.246.128.133 drop
+nft add rule inet filter input ip saddr 147.45.179.82 drop
+nft add rule inet filter input ip saddr 172.29.0.2 drop
